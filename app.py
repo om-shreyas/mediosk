@@ -16,6 +16,7 @@ symptoms_list = [
     "Jaundice", "Hallucinations", "Anxiety", "Ulcers"
 ]
 parameters = list(map(float,check_parameters()))
+st.write(parameters)
 
 st.write('Heartrate: ',(parameters[0])//1000,'Sp02: ',parameters[1],'Fever: ',parameters[2])
 
