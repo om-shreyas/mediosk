@@ -17,7 +17,7 @@ symptoms_list = [
 ]
 parameters = list(map(float,check_parameters()))
 
-st.write('Heartrate: ',(parameters[110])//1000,'Sp02: ',parameters[1],'Fever: ',parameters[2])
+st.write('Heartrate: ',(parameters[0])//1000,'Sp02: ',parameters[1],'Fever: ',parameters[2])
 
 
 Joint_Ache = st.checkbox("Joint Ache")
