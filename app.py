@@ -113,5 +113,4 @@ symptoms_dict = {
 input_value_df = pd.DataFrame([symptoms_dict])
 input_value_df = input_value_df.replace(True,1)
 input_value_df = input_value_df.replace(False,0)
-st.write(parameters)
 st.write(model.predict(input_value_df))
