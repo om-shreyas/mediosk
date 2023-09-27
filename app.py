@@ -15,9 +15,9 @@ symptoms_list = [
     "Painful Urination", "Rapid Heart Rate", "Change in blood pressure", "Gas", "Vomiting",
     "Jaundice", "Hallucinations", "Anxiety", "Ulcers"
 ]
-# parameters = check_parameters()
+parameters = list(map(float,check_parameters()))
 
-# st.write('Heartrate: ',parameters[0]/1000,'Sp02: ',parameters[1],'Fever: ',parameters[2])
+st.write('Heartrate: ',(parameters[0])//1000,'Sp02: ',parameters[1],'Fever: ',parameters[2])
 
 
 Joint_Ache = st.checkbox("Joint Ache")
@@ -100,15 +100,15 @@ symptoms_dict = {
     "Ulcers": Ulcers
 }
 
-# if(parameters[0]/1000>100):
-#     symptoms_dict['Rapid Heart Rate'] = True
-# else:
-#     symptoms_dict['Rapid Heart Rate'] = False
+if(parameters[0]/1000>100):
+    symptoms_dict['Rapid Heart Rate'] = True
+else:
+    symptoms_dict['Rapid Heart Rate'] = False
 
-# if(parameters[2]>37):
-#     symptoms_dict['Fever'] = True
-# else:
-#     symptoms_dict['Fever'] = False
+if(parameters[2]>37):
+    symptoms_dict['Fever'] = True
+else:
+    symptoms_dict['Fever'] = False
 
 input_value_df = pd.DataFrame([symptoms_dict])
 input_value_df = input_value_df.replace(True,1)
